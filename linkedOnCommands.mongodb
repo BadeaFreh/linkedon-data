@@ -1,0 +1,38 @@
+
+use('test-db');
+// db.linkedon.remove({})
+
+// exe1
+// db.linkedon.find({
+//     "salary": {$gt: 25000}
+// }).count()
+
+// exe2
+// db.linkedon.find({}).sort({"salary": -1}).limit(3)
+
+// exe3
+// db.linkedon.find({$and: [
+//     {"currentCompany.name": "Walmart"},
+//     {"salary": {$gte: 7000}}
+// ]}).count()
+
+// exe4
+// db.linkedon.find({
+//     $or: [
+//         {"currentCompany.industry": "Sales"},
+//         {"currentCompany.industry": "Retail"}
+//     ]
+// }, {"firstName": 1,
+//     "lastName": 1,
+//     "currentCompany.name": 1,
+//     "salary": 1}
+//     )
+// .sort({"salary": -1}).limit(1)
+
+// exe5
+// db.linkedon.find({
+//     $or: [
+//         {"currentCompany.name": "Apple"},
+//         {"previousCompanies.name": "Apple"}
+//     ]
+// }).count()
